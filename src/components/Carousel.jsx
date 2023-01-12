@@ -45,10 +45,12 @@ function Carousel() {
           return (
             <img
               src={slide.image}
-              alt="This is a carousel slide"
+              alt="tattoo photo"
               key={index}
               className={
-                index === currentSlide ? "block object-cover mx-auto" : "hidden"
+                index === currentSlide
+                  ? "block object-contain mx-auto h-auto w-auto"
+                  : "hidden"
               }
             />
           );
@@ -70,7 +72,7 @@ function Carousel() {
             <div
               className={
                 index === currentSlide
-                  ? "h-4 w-4 bg-textColor rounded-full m-2 mb-4 cursor-pointer"
+                  ? "h-4 w-4 bg-accentColor rounded-full m-2 mb-4 cursor-pointer"
                   : "h-4 w-4 bg-secondaryColor rounded-full m-2 mb-4 cursor-pointer"
               }
               key={index}

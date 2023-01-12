@@ -2,6 +2,8 @@ import React from "react";
 
 export default function Navbar({ fixed }) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const menuItems = ["HOME", "GALLERY", "CONTACT", "ABOUT US"];
+
   return (
     <>
       <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-primaryColor">
@@ -12,7 +14,7 @@ export default function Navbar({ fixed }) {
               href="#"
             >
               <img src="../../src/assets/react.svg"></img>
-              <span className=" self-center">Ink</span>
+              <span className="text-2xl self-center">Ink</span>
             </a>
             <button
               className="text-textColor cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -24,19 +26,30 @@ export default function Navbar({ fixed }) {
           </div>
           <div
             className={
-              "lg:flex flex-grow items-center" +
+              "lg:flex flex-grow items-center bg-primaryColor absolute right-[50%] translate-x-[50%] w-[100vw] lg:w-auto top-20 lg:relative lg:right-auto lg:top-auto lg:translate-x-0" +
               (navbarOpen ? " flex" : " hidden")
             }
-            id="example-navbar-danger"
+            id="navbar"
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-              <li className="nav-item">
+              {menuItems.map((item, index) => {
+                return (
+                  <li key={index} className="nav-item">
+                    <a
+                      className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-textColor hover:opacity-75"
+                      href="#"
+                    >
+                      <span className="text-xl ml-2">{item}</span>
+                    </a>
+                  </li>
+                );
+              })}
+              {/* <li className="nav-item">
                 <a
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-textColor hover:opacity-75"
                   href="#"
                 >
-                  <i className="text-lg leading-lg text-textColor opacity-75"></i>
-                  <span className="ml-2">Home</span>
+                  <span className="text-xl ml-2">Home</span>
                 </a>
               </li>
               <li className="nav-item">
@@ -44,8 +57,7 @@ export default function Navbar({ fixed }) {
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-textColor hover:opacity-75"
                   href="#"
                 >
-                  <i className="text-lg leading-lg text-textColor opacity-75"></i>
-                  <span className="ml-2">Gallery</span>
+                  <span className="text-xl ml-2">Gallery</span>
                 </a>
               </li>
               <li className="nav-item">
@@ -53,8 +65,7 @@ export default function Navbar({ fixed }) {
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-textColor hover:opacity-75"
                   href="#"
                 >
-                  <i className="text-lg leading-lg text-textColor opacity-75"></i>
-                  <span className="ml-2">Contact</span>
+                  <span className="text-xl ml-2">Contact</span>
                 </a>
               </li>
               <li className="nav-item">
@@ -62,10 +73,9 @@ export default function Navbar({ fixed }) {
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-textColor hover:opacity-75"
                   href="#"
                 >
-                  <i className="text-lg leading-lg text-textColor opacity-75"></i>
-                  <span className="ml-2">About Us</span>
+                  <span className="text-xl ml-2">About Us</span>
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
