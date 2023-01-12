@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../../src/assets/logo.svg";
 
 export default function Navbar({ fixed }) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -13,7 +14,7 @@ export default function Navbar({ fixed }) {
               className="text-sm font-bold leading-relaxed flex gap-4 mr-4 py-2 whitespace-nowrap uppercase text-textColor"
               href="#"
             >
-              <img src={"../../src/assets/react.svg"}></img>
+              <img src={logo}></img>
               <span className="text-2xl self-center">Ink</span>
             </a>
             <button
