@@ -5,7 +5,7 @@ function Banner() {
     <div className="container flex flex-wrap justify-center bg-primaryColor">
       <div className="w-6/12 sm:w-4/12 py-4">
         <img
-          src="../../src/assets/bannerProto.png"
+          src={require("../../src/assets/bannerProto.png")}
           alt="banner"
           className="shadow rounded max-w-full h-auto align-middle border-none"
         />

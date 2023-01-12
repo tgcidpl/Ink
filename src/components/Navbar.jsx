@@ -13,7 +13,7 @@ export default function Navbar({ fixed }) {
               className="text-sm font-bold leading-relaxed flex gap-4 mr-4 py-2 whitespace-nowrap uppercase text-textColor"
               href="#"
             >
-              <img src="../../src/assets/react.svg"></img>
+              <img src={require("../../src/assets/react.svg")}></img>
               <span className="text-2xl self-center">Ink</span>
             </a>
             <button
