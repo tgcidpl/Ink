@@ -10,8 +10,8 @@ function Banner() {
           className="shadow rounded max-w-full h-auto align-middle border-none"
         />
       </div>
-      <div className="my-auto">
-        <p className="text-2xl p-8">Wyborne Tatuaze no kufaaaa</p>
+      <div className="my-auto w-6/12 sm:w-4/12">
+        <h1 className="text-2xl text-center">Wyborne Tatuaze no kufaaaa</h1>
       </div>
     </div>
   );
